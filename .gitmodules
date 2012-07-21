@@ -1,0 +1,3 @@
+[submodule "submodules/olympics_app"]
+	path = submodules/olympics_app
+	url = https://github.com/moredip/2012-Olympics-iOS--iPad-and-iPhone--source-code.git

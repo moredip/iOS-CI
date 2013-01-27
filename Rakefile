@@ -38,6 +38,8 @@ namespace :ci do
   Cucumber::Rake::Task.new(:frank_test, 'Run Frank acceptance tests, generating HTML report as a CI artifact') do |t|
     t.cucumber_opts = "app/Frank/features --format pretty --format html --out ci_artifacts/frank_results.html"
   end
+
+  task :travis => ['ci:clear_artifacts','ci:build','ci:frank_build']
 end
 
 task :ci => ["ci:clear_artifacts","ci:build","ci:frank_build","ci:frank_test"]

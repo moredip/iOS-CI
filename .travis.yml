@@ -2,4 +2,4 @@ language: objective-c
 env:
   - OSX_VERSION=macosx10.8
 before_install: bundle install
-script: bundle exec rake ci:build
+script: bundle exec rake ci:travis

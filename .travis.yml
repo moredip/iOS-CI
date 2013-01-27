@@ -1,0 +1,4 @@
+language: objective-c
+env:
+  - OSX_VERSION=macosx10.8
+script: rake ci:build

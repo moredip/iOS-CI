@@ -39,7 +39,7 @@ namespace :ci do
     t.cucumber_opts = "app/Frank/features --format pretty --format html --out ci_artifacts/frank_results.html"
   end
 
-  task :travis => ['ci:clear_artifacts','ci:build','ci:frank_build']
+  task :travis => ['ci:clear_artifacts','ci:build','ci:frank_build','ci:frank_test']
 end
 
 task :ci => ["ci:clear_artifacts","ci:build","ci:frank_build","ci:frank_test"]

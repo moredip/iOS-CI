@@ -10,4 +10,4 @@ env:
 before_install: bundle install
 script: bundle exec rake ci:travis
 after_script:
-  - "bundle exec travis-artifacts upload --path ci_artifacts/ --target_path artifacts/$TRAVIS_BUILD_ID/$TRAVIS_JOB_ID"
+  - "bundle exec travis-artifacts upload --path ci_artifacts/ --target-path artifacts/$TRAVIS_BUILD_ID/$TRAVIS_JOB_ID"

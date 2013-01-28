@@ -1,5 +1,13 @@
 language: objective-c
 env:
-  - OSX_VERSION=macosx10.8
+  global: 
+    - OSX_VERSION=macosx10.8
+    - "ARTIFACTS_AWS_REGION=us-east-1"
+    - "ARTIFACTS_S3_BUCKET=travis-artifacts"
+    - secure: "jENQkvvyUDs2YqocNi2Nb2xsX4KNMk4eBBH2ekNcKKg7sgP0f3cn2SFaxlLH\nGK2BEp9hL0xruHHCpp0LXXpPLlaxPPrQ9zMqAbuMMV5am8RzVLD0hX7vC4Ix\ncKyve75QTx9KxQwnhnTlFRZnKFeGlsW6JvS+4i/kn8ys+/GHodk="
+    - secure: "M3JomnQ0Z8pSqzqwsM3zDTozWGf4FboczmMS21MdNzdn8/ITM4SLEA7zZvH7\nKS4mPEJUIWci7LN3YAEl79J58Bj2EqOOf2seag9DAPYwt6akXOmGpesB+dtx\n1Un1+SUM1wUkU17kQzi9c8L9FB06u/F4DBbg2N8QATOwqKssODc="
+    
 before_install: bundle install
 script: bundle exec rake ci:travis
+after_script:
+  - "bundle exec travis-artifacts upload --path ci_artifacts/ --target_path artifacts/$TRAVIS_BUILD_ID/$TRAVIS_JOB_ID"

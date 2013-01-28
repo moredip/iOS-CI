@@ -4,8 +4,8 @@ env:
     - OSX_VERSION=macosx10.8
     - "ARTIFACTS_AWS_REGION=us-east-1"
     - "ARTIFACTS_S3_BUCKET=travis-artifacts"
-    - secure: "jENQkvvyUDs2YqocNi2Nb2xsX4KNMk4eBBH2ekNcKKg7sgP0f3cn2SFaxlLH\nGK2BEp9hL0xruHHCpp0LXXpPLlaxPPrQ9zMqAbuMMV5am8RzVLD0hX7vC4Ix\ncKyve75QTx9KxQwnhnTlFRZnKFeGlsW6JvS+4i/kn8ys+/GHodk="
-    - secure: "M3JomnQ0Z8pSqzqwsM3zDTozWGf4FboczmMS21MdNzdn8/ITM4SLEA7zZvH7\nKS4mPEJUIWci7LN3YAEl79J58Bj2EqOOf2seag9DAPYwt6akXOmGpesB+dtx\n1Un1+SUM1wUkU17kQzi9c8L9FB06u/F4DBbg2N8QATOwqKssODc="
+    - secure: "axvFVwHvREy5wOg3O5G19zPSE5QGGozAJ6v9abbq6czK2Bl9tQVehMXKTcwp\nKsaMtc66D44yn+EzpuM2g4HUqoDdho0nqISIerreALAauvht2NUwwpHfxCRQ\nVc8ezu1/SGz4CbPYVksCAe2gfIAeVnAZWvi8PegXWhgz3cMDG8E="
+    - secure: "dG/ftp2XQDYGjUUuLpBu3iRBcAgYluhgQEwZIqPo/bAlZgNVNPcUvwvW8NWt\ndksO3ZpANkQuGndrabu+JyIb/KuNynJFKC7zRneVRNkc5pxX5s/2pv4fcVvp\nnV2JUWvzra6A9u3nbT/I97P8iH0aeLGf24VBST5dvZ/lGFfApSg="
     
 before_install: bundle install
 script: bundle exec rake ci:travis

@@ -1,11 +1,11 @@
 language: objective-c
 env:
   global: 
+    - secure: "axvFVwHvREy5wOg3O5G19zPSE5QGGozAJ6v9abbq6czK2Bl9tQVehMXKTcwp\nKsaMtc66D44yn+EzpuM2g4HUqoDdho0nqISIerreALAauvht2NUwwpHfxCRQ\nVc8ezu1/SGz4CbPYVksCAe2gfIAeVnAZWvi8PegXWhgz3cMDG8E="
+    - secure: "dG/ftp2XQDYGjUUuLpBu3iRBcAgYluhgQEwZIqPo/bAlZgNVNPcUvwvW8NWt\ndksO3ZpANkQuGndrabu+JyIb/KuNynJFKC7zRneVRNkc5pxX5s/2pv4fcVvp\nnV2JUWvzra6A9u3nbT/I97P8iH0aeLGf24VBST5dvZ/lGFfApSg="
     - OSX_VERSION=macosx10.8
     - "ARTIFACTS_AWS_REGION=us-east-1"
     - "ARTIFACTS_S3_BUCKET=travis-artifacts"
-    - secure: "axvFVwHvREy5wOg3O5G19zPSE5QGGozAJ6v9abbq6czK2Bl9tQVehMXKTcwp\nKsaMtc66D44yn+EzpuM2g4HUqoDdho0nqISIerreALAauvht2NUwwpHfxCRQ\nVc8ezu1/SGz4CbPYVksCAe2gfIAeVnAZWvi8PegXWhgz3cMDG8E="
-    - secure: "dG/ftp2XQDYGjUUuLpBu3iRBcAgYluhgQEwZIqPo/bAlZgNVNPcUvwvW8NWt\ndksO3ZpANkQuGndrabu+JyIb/KuNynJFKC7zRneVRNkc5pxX5s/2pv4fcVvp\nnV2JUWvzra6A9u3nbT/I97P8iH0aeLGf24VBST5dvZ/lGFfApSg="
     
 before_install: bundle install
 script: bundle exec rake ci:travis
